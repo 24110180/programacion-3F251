@@ -1,21 +1,25 @@
+#include "Serie.hpp"
 #include <iostream>
-#include "foco.hpp"
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/screen/screen.hpp>
 
+using namespace ftxui;
 int main(int argc, char const *argv[])
 {
-    Foco focos[10];
-    for (size_t i = 0; i < 10; 1 ++)
-    {
-        focos[i].Encender();
-    }
+    Screen pantalla = screen::Create(
+        Dimension::Full(),
+        Dimension::Full()
+    );
+    
+    auto document = ftxui::hbox({
+        vbox(spinner(1,1))
+    });
 
-    std::cout
-        << "Foco 1:"
-        << foco1.LeerEstado()
-        << std::endl;
-    std::cout
-        << "argc:"
-        << argc
-        << std::endl;
-    return EXIT_SUCCESS;
-}
+ftxui::Render(pantalla, document);
+
+return EXIT_SUCCESS;
+
+    
+    }
+   
+
