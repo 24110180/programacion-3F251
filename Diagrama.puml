@@ -1,0 +1,117 @@
+
+class Pájaro {
++volar()
++chocar()
++recogerMoneda()
+}
+class Jugador {
++controlarPájaro()
+}
+class Obstáculo {
++posicion
+}
+class Moneda {
++valor
+}
+class Puntaje {
++calcularPuntaje()
+}
+class Dificultad {
++ajustarNivel()
+}
+class Velocidad {
++aumentar()
++disminuir()
+}
+class Poder {
++activar()
+}
+class Escenario {
++dibujarFondo()
+}
+class Gravedad {
++aplicar()
+}
+class Vida {
++restar()
+}
+class Turbo {
++activar()
+}
+class Fin {
++mostrarPantalla()
+}
+class Música {
++reproducir()
+}
+class Tubería {
++generarTuberías()
+}
+class Partícula {
++mostrarEfecto()
+}
+class Inicio {
++mostrarMenú()
+}
+class Efecto {
++animar()
+}
+class Ropa {
++cambiarSkin()
+}
+class Escudo {
++proteger()
+}
+class Sonido {
++reproducirEfecto()
+}
+class Colisión {
++detectar()
+}
+class Movimiento {
++mover()
+}
+class Control {
++manejarEntrada()
+}
+class Impulso {
++aplicar()
+}
+class Memoria {
++guardarEstado()
++cargarEstado()
+}
+
+Jugador "1" *-- "1" Pájaro
+Pájaro "1" o-- "0..*" Obstáculo
+Pájaro "1" o-- "0..*" Moneda
+Pájaro "1" *-- "1" Puntaje
+Pájaro "1" *-- "1" Dificultad
+Dificultad "1" *-- "1" Velocidad
+Pájaro "1" o-- "0..*" Poder
+Pájaro "1" *-- "1" Escenario
+Pájaro "1" *-- "1" Gravedad
+Pájaro "1" *-- "1" Vida
+Pájaro "1" o-- "0..1" Turbo
+Pájaro "1" *-- "1" Fin
+Pájaro "1" *-- "1" Música
+Pájaro "1" o-- "0..*" Tubería
+Pájaro "1" o-- "0..*" Partícula
+Pájaro "1" *-- "1" Inicio
+Pájaro "1" o-- "0..*" Efecto
+Pájaro "1" o-- "0..1" Ropa
+Pájaro "1" o-- "0..1" Escudo
+Pájaro "1" *-- "1" Sonido
+Pájaro "1" *-- "1" Colisión
+Pájaro "1" *-- "1" Movimiento
+Pájaro "1" *-- "1" Control
+Pájaro "1" *-- "1" Impulso
+Pájaro "1" *-- "1" Memoria
+
+Memoria o-- "1" Puntaje
+Memoria o-- "1" Dificultad
+Memoria o-- "1" Vida
+Memoria o-- "1" Ropa
+Memoria o-- "1" Escudo
+
+@enduml
