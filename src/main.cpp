@@ -6,7 +6,7 @@
 using namespace ftxui;
 int main(int argc, char const *argv[])
 {
-    Screen pantalla = screen::Create(
+    Screen pantalla = Screen::Create(
         Dimension::Full(),
         Dimension::Full()
     );
