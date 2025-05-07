@@ -9,7 +9,15 @@ $(EXE) : src/main.cpp
 
 run : $(EXE)
 	./$<
-archivos: bin/archivos
+
+archivos : bin/archivos
 	./$<
-bin/archivos: src/archivos.cpp
+
+bin/archivos : src/archivos.cpp
+	$(CXX) $< -o $@ -std=c++17
+
+pokedex : bin/pokedex
+	./$<
+
+bin/pokedex : src/pokedex.cpp
 	$(CXX) $< -o $@ -std=c++17
